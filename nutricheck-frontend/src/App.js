@@ -9,6 +9,7 @@ import Features from "./Components/Features";
 import Login from "./Components/Login";
 
 import { Routes, Route } from "react-router-dom";
+import Analyse from "./Components/Analyse";
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
 
       {/* LOGIN PAGE */}
       <Route path="/login" element={<Login />} />
-
+      <Route path="/analyse" element={<Analyse />} />c
     </Routes>
   );
 }

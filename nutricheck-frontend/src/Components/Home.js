@@ -3,9 +3,12 @@ import React from "react";
 import BannerBackground from "../Assets/home-banner-background.png";
 import BannerImage from "../Assets/home-banner-image.png";
 import Navbar from "./Navbar";
+import { useNavigate } from 'react-router-dom';
+
 import { FiArrowRight } from "react-icons/fi";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="home-container" id="home">
       <Navbar />
@@ -21,9 +24,15 @@ const Home = () => {
             NutriCheck is an AI-powered platform that helps you understand the health quality of your meals.
 By combining computer vision, nutrition science, and machine learning, we help users make healthier food choices with confidence.
           </p>
-          <button className="secondary-button">
-            Check Now <FiArrowRight />{" "}
+
+          <button 
+            className="secondary-button"
+            onClick={() => navigate('/analyse')}
+          >
+            Check Now <FiArrowRight />
           </button>
+          
+         
         </div>
         <div className="home-image-section">
           <img src={BannerImage} alt="" />
