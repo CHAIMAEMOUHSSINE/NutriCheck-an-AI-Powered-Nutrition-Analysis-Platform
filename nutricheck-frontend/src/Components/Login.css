@@ -1,0 +1,239 @@
+.login-page-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 2rem;
+}
+
+.login-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-logo-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0cb431;
+  margin-bottom: 0.5rem;
+}
+
+.login-tagline {
+  color: #6a6a6a;
+  font-size: 1rem;
+}
+
+.login-toggle {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  background-color: #f6f6f6;
+  border-radius: 50px;
+  padding: 0.3rem;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: transparent;
+  color: #6a6a6a;
+}
+
+.toggle-btn.active-login {
+  background: linear-gradient(135deg, #f39c12, #ff8c00);
+  color: white;
+  box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
+}
+
+.toggle-btn.active-signup {
+  background: linear-gradient(135deg, #0cb431, #0a9528);
+  color: white;
+  box-shadow: 0 4px 12px rgba(12, 180, 49, 0.3);
+}
+
+.login-form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: #4c4c4c;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.input-group input {
+  padding: 0.9rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #f39c12;
+}
+
+.input-group input::placeholder {
+  color: #aaa;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  color: #6a6a6a;
+  cursor: pointer;
+}
+
+.checkbox-label input {
+  margin-right: 0.5rem;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #0cb431;
+}
+
+.forgot-link {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.forgot-link:hover {
+  color: #e08a0a;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f39c12, #0cb431);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+  margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+}
+
+.social-login {
+  margin-top: 2rem;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.divider span {
+  background-color: white;
+  padding: 0 1rem;
+  color: #6a6a6a;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.social-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  color: #4c4c4c;
+  gap: 0.5rem;
+}
+
+.social-btn:hover {
+  border-color: #f39c12;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 600px) {
+  .login-page-container {
+    padding: 1rem;
+  }
+
+  .login-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .login-logo-text {
+    font-size: 2rem;
+  }
+
+  .social-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .login-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
