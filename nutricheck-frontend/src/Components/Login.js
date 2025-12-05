@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import React, { useState } from 'react';
 import './Login.css';
 
@@ -6,10 +7,18 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [isSignUp, setIsSignUp] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', { email, password, isSignUp });
-  };
+  const navigate = useNavigate();
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  console.log('Form submitted:', { email, password, isSignUp });
+
+  // For now, we assume login is successful
+  // You can add authentication logic here
+  if (!isSignUp) {
+    navigate("/analyse"); // redirect to Analyse page after login
+  }
+};
 
   return (
     <div className="login-page-container">

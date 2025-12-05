@@ -1,6 +1,8 @@
 import React from "react";
 import ChaimaePic from "../Assets/Chaimae-image.jpg";
 import LatifaPic from "../Assets/Latifa-image.jpg";
+import AyaPic from "../Assets/Aya.jpg";
+import HalimaPic from "../Assets/Halima.jpg";
 import { AiFillStar } from "react-icons/ai";
 
 const Testimonial = () => {
@@ -16,6 +18,18 @@ const Testimonial = () => {
       review:
         "The AI-powered insights are amazing! I now know exactly how healthy my meals are, and it helps me plan better portions every day.",
       name: "Latifa Moutawakil",
+    },
+    {
+      image: AyaPic,
+      review:
+        "As a fitness enthusiast, NutriCheck became my go-to tool. It gives me clarity on calories and macros so I can stay on track effortlessly!",
+      name: "Aya Ouzarf",
+    },
+    {
+      image: HalimaPic,
+      review:
+        "I love how simple yet powerful NutriCheck is. It helped me adjust my meals and reach healthier habits without complications.",
+      name: "Halima id ouaksim",
     },
   ];
 
@@ -62,7 +76,10 @@ const Testimonial = () => {
             <p style={{ fontSize: "16px", marginBottom: "10px" }}>
               {testimonial.review}
             </p>
-            <div className="testimonials-stars-container" style={{ color: "#ffc107", marginBottom: "10px" }}>
+            <div
+              className="testimonials-stars-container"
+              style={{ color: "#ffc107", marginBottom: "10px" }}
+            >
               <AiFillStar />
               <AiFillStar />
               <AiFillStar />
