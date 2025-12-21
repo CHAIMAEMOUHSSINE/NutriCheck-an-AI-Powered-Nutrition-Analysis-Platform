@@ -18,6 +18,11 @@ const handleSubmit = (e) => {
   if (!isSignUp) {
     navigate("/analyse"); // redirect to Analyse page after login
   }
+  if (isSignUp) {
+     navigate("/login");
+  window.location.reload();
+  }
+
 };
 
   return (

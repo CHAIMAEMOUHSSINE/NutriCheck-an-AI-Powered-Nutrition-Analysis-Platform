@@ -105,7 +105,6 @@ const Analyse = () => {
           onClick={() => setCurrentPage("about")}
           className={currentPage === "about" ? "active" : ""}
         >
-          <Info size={20} /> À propos
         </a>
       </div>
     </nav>
@@ -213,12 +212,7 @@ const Analyse = () => {
     );
   };
 
-  const renderAbout = () => (
-    <div className="about-page">
-      <h1 className="page-title">À propos de NutriCheck</h1>
-      <p>NutriCheck analyse vos repas et vous indique si ils sont sains ou pas.</p>
-    </div>
-  );
+
 
   return (
     <div className="app">
@@ -230,7 +224,6 @@ const Analyse = () => {
         {currentPage === "upload" && renderUpload()}
         {analysisResult && renderResults()}
         {currentPage === "history" && renderHistory()}
-        {currentPage === "about" && renderAbout()}
       </div>
     </div>
   );

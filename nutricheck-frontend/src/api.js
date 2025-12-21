@@ -29,3 +29,39 @@ export const predictMeal = async (ingredientQuantities) => {
     return null;
   }
 };
+
+
+// Envoyer un élément d'historique au backend pour le sauvegarder
+export const saveHistoryItem = async (historyItem) => {
+  try {
+    const res = await fetch(`${API_URL}/history`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(historyItem)
+    });
+    if (!res.ok) throw new Error("Erreur save history");
+    const data = await res.json();
+    return data.success;
+  } catch (err) {
+    console.error("Erreur save history:", err);
+    return false;
+  }
+};
+
+
+// Récupérer l'historique complet depuis le backend
+export const fetchHistory = async () => {
+  try {
+    const res = await fetch(`${API_URL}/history`);
+    if (!res.ok) throw new Error("Erreur fetch history");
+    const data = await res.json();
+    if (data.success) {
+      // Convertir l'objet Firebase en tableau
+      return Object.values(data.history);
+    }
+    return [];
+  } catch (err) {
+    console.error("Erreur fetch history:", err);
+    return [];
+  }
+};
