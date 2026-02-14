@@ -1,80 +1,72 @@
-🥗 NutriCheck – AI-Powered Nutrition Analysis Platform
+# 🥗 NutriCheck – AI-Powered Nutrition Analysis Platform
 
-NutriCheck is an AI-powered web platform designed to help users analyze their meals, understand their nutritional values, and make healthier food choices.
-The application combines machine learning, web technologies, and a large-scale food database to provide instant nutritional insights and personalized recommendations.
+**NutriCheck** est une plateforme web intelligente conçue pour aider les utilisateurs à analyser leurs repas, comprendre leurs valeurs nutritionnelles et faire des choix alimentaires plus sains. 
 
-🎯 Project Objective
-The goal of NutriCheck is to:
-Simplify meal analysis
-Increase awareness of nutritional intake
-Help users improve their eating habits over time
-Provide clear and actionable health feedback
+L'application combine le **Machine Learning**, les technologies web modernes et une base de données alimentaire à grande échelle pour fournir des informations nutritionnelles instantanées et des recommandations personnalisées.
 
-🚀 Key Features
-Meal analysis based on selected ingredients and quantities
-Automatic calculation of nutritional values:
-Calories
-Proteins
-Carbohydrates
-Fats
-Sugars
-Fibers
-Sodium
-AI-generated health score (0–100)
-Clear verdict: Healthy / Unhealthy
-Personalized nutrition recommendations
-User history tracking with statistics and progress visualization
-🧠 Artificial Intelligence
-Model: Logistic Regression implemented from scratch
-Language: Python
-Features used:
-Proteins
-Carbohydrates
-Fats
-Sugars
-Fibers
-Sodium
-Polynomial feature expansion to handle non-linear relationships
-Model performance:
-Accuracy: ~87%
-Precision, Recall, and F1-score around 87%
-🛠️ Technologies Used
-Backend: Python
-Flask – REST API
-Firebase Realtime Database – user data & history
-Frontend : React JS
-Tailwind CSS
-Data & ML : Jupyter Notebook
-USDA Food Dataset (500,000+ food items)
-Kaggle Dataset for model training
-📂 Project Structure (Simplified)
+---
+
+## 🎯 Objectifs du Projet
+Le but de NutriCheck est de :
+* **Simplifier** l'analyse des repas au quotidien.
+* **Sensibiliser** les utilisateurs à leurs apports nutritionnels réels.
+* **Améliorer** les habitudes alimentaires sur le long terme.
+* **Fournir** un feedback santé clair, précis et actionnable.
+
+---
+
+## 🚀 Fonctionnalités Clés
+* **Analyse de repas** basée sur les ingrédients et les quantités sélectionnés.
+* **Calcul automatique des valeurs nutritionnelles :**
+    * Calories, Protéines, Glucides, Lipides.
+    * Sucres, Fibres, Sodium.
+* **Score de santé (AI-generated) :** Note de 0 à 100.
+* **Verdict clair :** Classification *Sain (Healthy)* / *Mauvais pour la santé (Unhealthy)*.
+* **Recommandations personnalisées :** Conseils nutritionnels adaptés.
+* **Suivi de l'historique :** Statistiques et visualisation des progrès de l'utilisateur.
+
+---
+
+## 🧠 Intelligence Artificielle
+Le cœur de l'analyse repose sur un modèle de classification robuste :
+
+* **Modèle :** Régression Logistique (implémentée *from scratch*).
+* **Langage :** Python.
+* **Features utilisées :** Protéines, Glucides, Lipides, Sucres, Fibres, Sodium.
+* **Optimisation :** Expansion de caractéristiques polynomiales pour gérer les relations non-linéaires.
+* **Performance du modèle :**
+    * **Précision (Accuracy) :** ~87%
+    * **Precision, Recall, F1-score :** ~87%
+
+---
+
+## 🛠️ Technologies Utilisées
+
+| Secteur | Technologies |
+| :--- | :--- |
+| **Backend** | Python, Flask (REST API) |
+| **Frontend** | React JS, Tailwind CSS |
+| **Base de données** | Firebase Realtime Database |
+| **Data & ML** | Jupyter Notebook, NumPy, Pandas |
+| **Datasets** | USDA Food Dataset (500k+ items), Kaggle |
+
+---
+
+## 📂 Structure du Projet (Simplifiée)
+
+```text
 NutriCheck/
 │
 ├── backend/
-│   ├── model/
-│   ├── api/
-│   ├── notebooks/
-│   └── BDprivateKey/   (ignored – contains local keys only)
+│   ├── model/         # Modèles ML entraînés
+│   ├── api/           # Endpoints Flask
+│   ├── notebooks/     # Analyse de données et entraînement
+│   └── BDprivateKey/  # (Ignoré) Clés de configuration privées
 │
 ├── frontend/
-│   ├── components/
-│   ├── pages/
-│   └── assets/
+│   ├── components/    # Composants React réutilisables
+│   ├── pages/         # Vues principales de l'application
+│   └── assets/        # Images et styles
 │
-├── .gitignore
-└── README.md
-🔐 Security Notice
-⚠️ Important
-
-To run the project locally, you must provide your own Firebase credentials.
-This follows industry best practices for security.
-▶️ Demo
-A full demo video showcasing:
-Meal analysis
-Health score calculation
-Recommendations
-User history and statistics
-📹 Demo video is available in this repository / LinkedIn post
-https://www.linkedin.com/posts/chaimae-mouhssine-b305a22a8_what-if-your-meals-could-speak-for-your-activity-7408541798920331264-p15U?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEogOdQB0qRuhbbwDdjTRUWcSbSFBDRCL_A
-NutriCheck transforms nutritional data into clear, actionable insights.
-Our vision is to make healthy eating simple, accessible, and intelligent — because every meal is an opportunity to improve your health.
+├── .gitignore         # Fichiers à exclure du versioning
+└── README.md          # Documentation du projet
